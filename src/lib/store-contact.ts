@@ -12,7 +12,7 @@ export const BANK_TRANSFER = {
 
 export const EVC_PLUS = {
   accountName: "Abdurahman Asad Store",
-  number: "+252 61 506 3126",
+  number: "+252 615 06 31 26",
 };
 
 /** Digits only, country code first, no leading + or 00 — required by wa.me links. */
