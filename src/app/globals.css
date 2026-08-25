@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   Atelier Nord — design tokens
+   Palette: gallery plaster + graphite ink + one verdigris accent.
+   Type:    Syne (display) / IBM Plex Sans (body) / IBM Plex Mono (data).
+   ------------------------------------------------------------------ */
+@theme {
+  --color-plaster: #e3e0d9;
+  --color-chalk: #f6f5f2;
+  --color-graphite: #191a17;
+  --color-slate: #76766e;
+  --color-hairline: #c9c5bb;
+  --color-verdigris: #1e5b50;
+  --color-verdigris-soft: #dfe9e5;
+
+  --font-display: var(--font-syne), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, monospace;
+
+  --radius-card: 2px;
+
+  --ease-shelf: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-plaster);
+    color: var(--color-graphite);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* One focus treatment across the whole product. */
+  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    outline: 2px solid var(--color-verdigris);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  ::selection {
+    background-color: var(--color-verdigris);
+    color: var(--color-chalk);
+  }
+}
+
+@layer components {
+  /* The shelf tag: mono, uppercase, wide-tracked. Used for eyebrows,
+     stock states, slide indices — the store's one recurring voice. */
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .rule {
+    border-top: 1px solid var(--color-hairline);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Page-load sequence for the hero — a single orchestrated moment. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.7s var(--ease-shelf) both;
+}
