@@ -35,7 +35,7 @@ export default async function HomePage() {
       <section id="products" className="mx-auto max-w-[1440px] px-5 pt-20 sm:px-8 lg:px-12 lg:pt-28">
         <div className="rule pt-6">
           <p className="tag text-verdigris">In the shop</p>
-          <h2 className="mt-5 max-w-4xl font-display text-[clamp(2.25rem,6vw,4.25rem)] font-extrabold uppercase leading-[0.92] tracking-[-0.035em]">
+          <h2 className="mt-5 max-w-4xl break-words text-balance font-display text-[clamp(1.5rem,7vw,4.25rem)] font-extrabold uppercase leading-[1.05] tracking-[-0.02em] sm:leading-[0.92] sm:tracking-[-0.035em]">
             Tayo iyo adeeg hufnaan waa astaanteena
           </h2>
         </div>
