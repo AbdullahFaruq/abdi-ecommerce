@@ -30,7 +30,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Abdurahman Asad Store — clothing for everyday wear",
+  title: "Abdirahman Asad Store — clothing for everyday wear",
   description:
     "A small clothing store for shirts, dresses and everyday essentials, made in short runs and sold while they last.",
 };

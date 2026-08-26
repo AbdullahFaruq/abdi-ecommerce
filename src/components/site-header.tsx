@@ -21,12 +21,18 @@ export async function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-hairline bg-plaster/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between gap-3 px-5 sm:gap-6 sm:px-8 lg:px-12">
-        <Link href="/" className="group flex min-w-0 items-baseline gap-1 sm:gap-2">
-          <span className="truncate font-display text-xs font-extrabold uppercase leading-none tracking-[-0.02em] sm:text-lg">
-            Abdurahman Asad
+        {/* Below `sm` the name stacks onto two lines (Abdirahman / Asad Store)
+            so the whole wordmark stays visible instead of shrinking to fit
+            one line; from `sm` up it's a single inline row like before. */}
+        <Link href="/" className="group grid min-w-0 leading-none sm:flex sm:items-baseline sm:gap-2">
+          <span className="font-display text-sm font-extrabold uppercase tracking-[-0.02em] sm:text-lg">
+            Abdirahman
           </span>
-          <span className="shrink-0 font-display text-xs font-extrabold uppercase leading-none tracking-[-0.02em] text-verdigris transition-colors duration-300 group-hover:text-graphite sm:text-lg">
-            Store
+          <span className="font-display text-sm font-extrabold uppercase tracking-[-0.02em] sm:text-lg">
+            Asad{" "}
+            <span className="text-verdigris transition-colors duration-300 group-hover:text-graphite">
+              Store
+            </span>
           </span>
         </Link>
 

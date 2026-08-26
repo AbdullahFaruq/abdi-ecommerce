@@ -1,4 +1,4 @@
-# Abdurahman Asad Store
+# Abdirahman Asad Store
 
 A production-shaped e-commerce storefront: Next.js 15 (App Router) + TypeScript, Clerk auth with an admin role, MongoDB via Mongoose, and Cloudinary for uploaded images.
 

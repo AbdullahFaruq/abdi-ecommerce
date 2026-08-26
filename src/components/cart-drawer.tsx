@@ -14,7 +14,7 @@ function buildWhatsAppMessage(items: CartItem[], subtotal: number): string {
   );
 
   return [
-    "Hi! I'd like to confirm this order from Abdurahman Asad Store:",
+    "Hi! I'd like to confirm this order from Abdirahman Asad Store:",
     "",
     ...lines,
     "",

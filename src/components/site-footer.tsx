@@ -9,7 +9,7 @@ export function SiteFooter() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div className="max-w-sm">
             <p className="font-display text-2xl font-extrabold uppercase leading-none tracking-[-0.02em]">
-              Abdurahman Asad <span className="text-verdigris">Store</span>
+              Abdirahman Asad <span className="text-verdigris">Store</span>
             </p>
             <p className="mt-5 text-sm leading-relaxed text-slate">
               Shirts, dresses and everyday essentials, cut and sewn in short runs. When a style
@@ -44,7 +44,7 @@ export function SiteFooter() {
         </div>
 
         <div className="rule mt-14 flex flex-col gap-3 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="tag text-slate">© {new Date().getFullYear()} Abdurahman Asad Store</p>
+          <p className="tag text-slate">© {new Date().getFullYear()} Abdirahman Asad Store</p>
           <p className="tag text-slate">Made to be worn</p>
         </div>
       </div>
